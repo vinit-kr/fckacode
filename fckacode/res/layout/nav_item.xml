@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/drawer_width"
+    android:layout_height="@dimen/drawer_section_height"
+    android:background="@drawable/nav_item_background"
+    android:layout_marginLeft="3dp">
+    
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="@dimen/drawer_icon_width"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_smiley"
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/drawer_padding_top" 
+        android:paddingBottom="@dimen/drawer_padding_top" 
+        android:layout_marginLeft="@dimen/drawer_padding_left"
+        android:layout_marginRight="@dimen/drawer_padding_right"
+		android:background="@null"
+        />
+
+  <TextView
+      android:id="@+id/label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:layout_centerVertical="true"
+      android:layout_toRightOf="@+id/icon"
+      android:textColor="@color/white"
+      android:textSize="@dimen/menu_text_size"
+      android:fontFamily="sans-serif-light"/>
+    
+    </RelativeLayout>
