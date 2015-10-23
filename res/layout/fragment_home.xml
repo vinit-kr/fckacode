@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+    <FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+     
+            <fragment
+                 android:id="@+id/mapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            class="com.google.android.gms.maps.MapFragment"
+                />
+
+        <ImageButton
+            android:id="@+id/btn_nav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_drawer" />
+
+        <LinearLayout
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="top"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:visibility="gone" >
+
+            <SearchView
+                android:id="@+id/search_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <!--
+                 <TextView
+                android:id="@+id/search"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:drawableLeft="@drawable/search"
+                android:gravity="center_vertical"
+                android:drawablePadding="13dp"
+                android:paddingLeft="15dp"
+                android:text="@string/where_r_u_going" />
+            -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/coriderFinding"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/msg_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_smiley"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/coriders_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/coriderFinding_msg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/availCoriders_msg"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_gravity="top"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="1dp"
+                android:text="Total available coriders at this location"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="7dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/progressIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/address_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/loading_text_margin"
+                android:text="@string/finding_current_location" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp" >
+
+            <!--
+         <ImageButton
+                android:id="@+id/btn_nav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@drawable/ic_drawer"
+                android:paddingBottom="10dp" />
+            -->
+            <!-- <RelativeLayout android:layout_width="fill_parent" android:layout_height="100dp" android:layout_gravity="bottom" > -->
+
+            <LinearLayout
+                android:id="@+id/bottom_btn_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingRight="10dp" >
+
+                <Button
+                    android:id="@+id/btn_want_to_share_ride"
+                    android:layout_width="230dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_selector"
+                    android:text="@string/lbl_want_to_share_ride"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/btn_text_size" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/btn_need_ride"
+                        android:layout_width="112dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="6dp"
+                        android:alpha="0.80"
+                        android:background="@drawable/button_selector"
+                        android:text="@string/lbl_need_ride"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/btn_text_size" />
+
+                    <Button
+                        android:id="@+id/btn_offer_ride"
+                        android:layout_width="112dp"
+                        android:layout_height="45dp"
+                        android:alpha="0.80"
+                        android:background="@drawable/button_selector"
+                        android:text="@string/lbl_offer_ride"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/btn_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>

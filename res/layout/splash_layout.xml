@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="135dp" >
+
+        <ImageView
+            android:id="@+id/img_splash_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/splash_car_icon" />
+
+         <LinearLayout
+            android:id="@+id/splashInfoContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_splash_car" 
+            android:layout_marginLeft="22dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/accept_mark"
+                android:text="@string/share_ride_splash_msg" />
+
+            <TextView
+                android:id="@+id/line_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/accept_mark"
+                android:layout_marginTop="6dp"
+                android:text="@string/offer_ride_splash_msg" />
+
+            <TextView
+                android:id="@+id/line_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/accept_mark"
+                android:layout_marginTop="6dp"
+                android:text="@string/find_ride_splash_msg" />
+        </LinearLayout>
+       
+      <!--    <ImageView
+        android:id="@+id/img_splash_info"
+        android:layout_below="@id/img_splash_car"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:src="@drawable/splash_info" />
+       -->
+
+    </RelativeLayout>
+
+</LinearLayout>
